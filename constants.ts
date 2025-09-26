@@ -1,6 +1,8 @@
 
+import React from 'react';
 import { Role, Page } from './types';
 
+// FIX: Added React import to fix "Cannot find namespace 'React'". The type React.FC was used without importing React.
 export const NAVIGATION_ITEMS: Record<Role, { name: string; page: Page; icon: React.FC<any> }[]> = {
   [Role.Admin]: [
     { name: 'Dashboard', page: 'DASHBOARD', icon: 'HomeIcon' as any },
